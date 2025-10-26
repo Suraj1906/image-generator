@@ -35,6 +35,11 @@ const BuyCredit = () => {
       description: 'Credits Payment',
       order_id: order.id,
       receipt: order.receipt,
+      prefill: {
+    name: "",       // optional: leave blank
+    email: "",      // optional: leave blank
+    contact: ""     // THIS will remove the default phone number
+  },
       handler: async(response)=>{
         try {
           const {data} = await axios.post(backendUrl + '/api/user/verify-razor', response, {headers: {token}})
