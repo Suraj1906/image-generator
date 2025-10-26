@@ -10,7 +10,7 @@ const app = express()
 
 // ✅ Proper CORS setup
 app.use(cors({
-  origin: ["http://localhost:5173", "https://image-generator-lrxq.vercel.app/"], // frontend domain
+  origin: ["http://localhost:5173", "https://image-generator-lrxq.vercel.app"], // frontend domain
   credentials: true,
 }));
 
