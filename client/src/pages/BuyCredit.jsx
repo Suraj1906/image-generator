@@ -40,6 +40,12 @@ const BuyCredit = () => {
     email: "",      // optional: leave blank
     contact: ""     // THIS will remove the default phone number
   },
+  modal: {
+    escape: true,
+    backdropclose: false,
+    // Disable autofill in browser
+    confirm_close: true
+  },
       handler: async(response)=>{
         try {
           const {data} = await axios.post(backendUrl + '/api/user/verify-razor', response, {headers: {token}})
